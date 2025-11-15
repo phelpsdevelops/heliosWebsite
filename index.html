@@ -201,12 +201,26 @@
     function scrollToSection(id) {
       document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
-     function handleFollow() {
-    alert("Thanks for your interest! We'll add a follow system or link here.");
+    function openPeopleForm() {
+    const popup = document.getElementById("peoplePopup");
+    if (popup) {
+      popup.style.display = "flex";
+    }
+  }
+
+  function closePeopleForm() {
+    const popup = document.getElementById("peoplePopup");
+    if (popup) {
+      popup.style.display = "none";
+    }
+  }
+
+  function handleFollow() {
+    alert("Thanks for your interest! In the live version, this will link to updates or a mailing list.");
   }
 
   function handleInvest() {
-    alert("Investment options coming soon. We’ll guide supporters here.");
+    alert("Thank you for wanting to support Helios. In the live version, this will link to investor or supporter information.");
   }
   </script>
 </body>
