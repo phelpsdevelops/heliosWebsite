@@ -31,11 +31,18 @@
           <a href="#contact">Contact</a>
         </nav>
         <div class="nav-cta">
-          <button class="btn btn-outline" onclick="scrollToSection('impact')">For Governments</button>
-          <button class="btn btn-primary" onclick="scrollToSection('contact')">
-            Book a Briefing <span class="btn-icon">↗</span>
-          </button>
-        </div>
+  <button class="btn btn-outline" onclick="scrollToSection('impact')">
+    For Governments
+  </button>
+
+  <button class="btn btn-outline" onclick="openPeopleForm()">
+    For The People
+  </button>
+
+  <button class="btn btn-primary" onclick="scrollToSection('contact')">
+    Book a Briefing ↗
+  </button>
+</div>
       </div>
     </header>
 
@@ -156,12 +163,51 @@
       </section>
     </main>
 
+    <!-- POPUP FORM -->
+<div id="peoplePopup" class="popup-overlay">
+  <div class="popup-content">
+    <button class="popup-close" onclick="closePeopleForm()">×</button>
+
+    <h2 class="popup-title">Your Voice Matters Here</h2>
+    <p class="popup-subtitle">
+      We’re building a future where every community has access to clean, reliable water. 
+      How would you like to be part of the movement?
+    </p>
+
+    <form class="popup-form">
+
+      <button type="button" class="popup-option" onclick="handleFollow()">
+        🌍 Follow Our Mission  
+        <span class="option-sub">Get updates, stories, and community progress.</span>
+      </button>
+
+      <button type="button" class="popup-option" onclick="handleInvest()">
+        ☀️ Invest in a Better Future  
+        <span class="option-sub">Learn how you can support or fund our clean-water work.</span>
+      </button>
+
+    </form>
+
+    <p class="popup-footnote">
+      We respect your privacy — your information is always protected.
+    </p>
+  </div>
+</div>
+
+
   </div>
 
   <script>
     function scrollToSection(id) {
       document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
+     function handleFollow() {
+    alert("Thanks for your interest! We'll add a follow system or link here.");
+  }
+
+  function handleInvest() {
+    alert("Investment options coming soon. We’ll guide supporters here.");
+  }
   </script>
 </body>
 </html>
